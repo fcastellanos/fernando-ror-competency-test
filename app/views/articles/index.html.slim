@@ -17,11 +17,11 @@ table
         td = article.title
         td = article.content
         td = article.category
-        td = article.user
-        td = link_to 'Show', article
-        td = link_to 'Edit', edit_article_path(article)
-        td = link_to 'Destroy', article, data: { confirm: 'Are you sure?' }, method: :delete
+        td = format_user_name(article.user)
+        td = link_to 'Show', article if logged_in?(:user, :editor, :admin)
+        td = link_to 'Edit', edit_article_path(article) if action_allowed?(current_user, article)
+        td = link_to 'Destroy', article, data: { confirm: 'Are you sure?' }, method: :delete if action_allowed?(current_user, article)
 
 br
 
-= link_to 'New Article', new_article_path
+= link_to 'New Article', new_article_path if logged_in?(:editor, :admin)

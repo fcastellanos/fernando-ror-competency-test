@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
+  
+  access all: [:index], user: [:index, :show], editor: [:index, :show, :new, :edit, :create, :update, :destroy], admin: [:index, :show, :new, :edit, :create, :update, :destroy]
 
   # GET /articles
   def index
@@ -22,7 +23,7 @@ class ArticlesController < ApplicationController
 
   # POST /articles
   def create
-    @article = Article.new(article_params)
+    @article = Article.new(article_params.merge(user: current_user))
 
     if @article.save
       redirect_to @article, notice: 'Article was successfully created.'

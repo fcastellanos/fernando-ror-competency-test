@@ -14,6 +14,23 @@ admin = User.create(
     roles: 'admin'
 )
 
+editor = User.create(
+    first_name: 'Herman',
+    last_name: 'Editor',
+    email: 'herman@editor.com',
+    password: 'letme1n',
+    password_confirmation: 'letme1n',
+    roles: 'editor'
+)
+
+user = User.create(
+    first_name: 'Ulices',
+    last_name: 'User',
+    email: 'ulices@user.com',
+    password: 'letme1n',
+    password_confirmation: 'letme1n'
+)
+
 articles = Article.create([
     { 
         category: 'ruby', 
@@ -62,5 +79,11 @@ articles = Article.create([
         title: 'Intermediate', 
         content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false), 
         user: admin 
+    },
+    { 
+        category: 'serverless', 
+        title: 'Intro', 
+        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false), 
+        user: editor
     },
 ])
