@@ -10,11 +10,18 @@
   </head>
 
   <body>
+    <div class="header">
+      <h1>Simple News App</h1>
+    </div>
+
+    <div class="navbar">
+      <%= link_to('Home', root_path) %>
+      <%= link_to('Articles', articles_path) %>
+      <%= render 'devise/menu/login_items' %>
+    </div>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <ul class="hmenu">
-      <%= render 'devise/menu/login_items' %>
-    </ul>
     <%= yield %>
   </body>
 </html>

@@ -15,7 +15,7 @@ table
     - @articles.each do |article|
       tr
         td = article.title
-        td = article.content
+        td = article.content.truncate(100)
         td = article.category
         td = format_user_name(article.user)
         td = link_to 'Show', article if logged_in?(:user, :editor, :admin)

@@ -1,7 +1,9 @@
-h1 Home
-
-- @articles.each do |category, articles|
-    h2 = category
-    - articles.each do |article|
-        h3 = article.title
-        p = article.content
+div class="home-content"
+    - @articles.each do |category, articles|
+        div class="home-category"
+            div class="category-title"
+                h1 = category.capitalize
+            - articles.each do |article|
+                article class="home-category-article"
+                    h3 = article.title
+                    p = article.content
