@@ -10,7 +10,7 @@ p
   strong Category:
   = @article.category
 p
-  strong User: 
+  strong User:
   = format_user_name(@article.user)
 
 => link_to 'Edit', edit_article_path(@article) if action_allowed?(current_user, @article)

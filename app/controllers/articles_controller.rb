@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  
+
   access all: [:index], user: [:index, :show], editor: [:index, :show, :new, :edit, :create, :update, :destroy], admin: [:index, :show, :new, :edit, :create, :update, :destroy]
 
   # GET /articles
@@ -19,6 +19,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
+    redirect_to articles_url, notice: 'You are not authorized to edit that article' unless helpers.action_allowed?(current_user, @article)
   end
 
   # POST /articles
@@ -34,17 +35,25 @@ class ArticlesController < ApplicationController
 
   # PATCH/PUT /articles/1
   def update
-    if @article.update(article_params)
-      redirect_to @article, notice: 'Article was successfully updated.'
+    if helpers.action_allowed?(current_user, @article)
+      if @article.update(article_params)
+        redirect_to @article, notice: 'Article was successfully updated.'
+      else
+        render :edit
+      end
     else
-      render :edit
+      redirect_to articles_url, notice: 'You are not authorized to update that article'
     end
   end
 
   # DELETE /articles/1
   def destroy
-    @article.destroy
+    if helpers.action_allowed?(current_user, @article)
+      @article.destroy
     redirect_to articles_url, notice: 'Article was successfully destroyed.'
+    else
+      redirect_to articles_url, notice: 'You are not authorized to delete that article'
+    end
   end
 
   private

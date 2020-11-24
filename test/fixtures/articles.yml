@@ -42,8 +42,14 @@ rails_routing:
   content: MyText
   user: admin
 
-rails_templating:
+rails_views:
   category: rails
-  title: Templating
+  title: Views
   content: MyText
   user: admin
+
+sls_intro:
+  category: serverless
+  title: Intro
+  content: MyText
+  user: editor

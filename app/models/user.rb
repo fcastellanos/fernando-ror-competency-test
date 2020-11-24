@@ -5,14 +5,15 @@ class User < ApplicationRecord
   ## The :root_admin can access any page regardless of access settings. Use with caution!   ##
   ## The multiple option can be set to true if you need users to have multiple roles.       ##
   petergate(roles: [:admin, :editor], multiple: false)                                      ##
-  ############################################################################################ 
- 
+  ############################################################################################
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  
+
+  validates :first_name, :last_name, presence: true
+
   # If time allows maybe create a poly table?
   has_many :articles
 end

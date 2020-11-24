@@ -32,58 +32,58 @@ user = User.create(
 )
 
 articles = Article.create([
-    { 
-        category: 'ruby', 
-        title: 'Intro', 
-        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false), 
-        user: admin 
+    {
+        category: 'ruby',
+        title: 'Intro',
+        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
+        user: admin
     },
-    { 
-        category: 'ruby', 
-        title: 'Data Types', 
-        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false), 
-        user: admin 
+    {
+        category: 'ruby',
+        title: 'Data Types',
+        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
+        user: admin
     },
-    { 
-        category: 'ruby', 
-        title: 'Flow Control', 
-        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false), 
-        user: admin 
+    {
+        category: 'ruby',
+        title: 'Flow Control',
+        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
+        user: admin
     },
-    { 
-        category: 'ruby', 
-        title: 'Intermediate', 
-        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false), 
-        user: admin 
+    {
+        category: 'ruby',
+        title: 'Intermediate',
+        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
+        user: admin
     },
-    { 
-        category: 'rails', 
-        title: 'Intro', 
-        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false), 
-        user: admin 
+    {
+        category: 'rails',
+        title: 'Intro',
+        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
+        user: admin
     },
-    { 
-        category: 'rails', 
-        title: 'Active Record', 
-        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false), 
-        user: admin 
+    {
+        category: 'rails',
+        title: 'Active Record',
+        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
+        user: admin
     },
-    { 
-        category: 'rails', 
-        title: 'Routing', 
-        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false), 
-        user: admin 
+    {
+        category: 'rails',
+        title: 'Routing',
+        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
+        user: admin
     },
-    { 
-        category: 'rails', 
-        title: 'Intermediate', 
-        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false), 
-        user: admin 
+    {
+        category: 'rails',
+        title: 'Intermediate',
+        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
+        user: admin
     },
-    { 
-        category: 'serverless', 
-        title: 'Intro', 
-        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false), 
+    {
+        category: 'serverless',
+        title: 'Intro',
+        content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
         user: editor
     },
 ])
