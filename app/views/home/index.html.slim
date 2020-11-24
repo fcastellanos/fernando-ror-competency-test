@@ -1,0 +1,7 @@
+h1 Home
+
+- @articles.each do |category, articles|
+    h2 = category
+    - articles.each do |article|
+        h3 = article.title
+        p = article.content

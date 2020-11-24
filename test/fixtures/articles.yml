@@ -1,13 +1,49 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
+ruby_intro:
+  category: ruby
+  title: Intro
   content: MyText
-  category: MyString
-  user: one
+  user: admin
 
-two:
-  title: MyString
+ruby_types:
+  category: ruby
+  title: Data Types
   content: MyText
-  category: MyString
-  user: two
+  user: admin
+
+ruby_flow:
+  category: ruby
+  title: Flow Control
+  content: MyText
+  user: admin
+
+ruby_meta:
+  category: ruby
+  title: Meta Programming
+  content: MyText
+  user: admin
+
+rails_intro:
+  category: rails
+  title: Intro
+  content: MyText
+  user: admin
+
+rails_ar:
+  category: rails
+  title: Active Record
+  content: MyText
+  user: admin
+
+rails_routing:
+  category: rails
+  title: Routing
+  content: MyText
+  user: admin
+
+rails_templating:
+  category: rails
+  title: Templating
+  content: MyText
+  user: admin
