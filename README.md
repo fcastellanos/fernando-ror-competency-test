@@ -1,5 +1,15 @@
 # Simple News App - Rails Competency Test
 
+## Steps to run the project.
+
+- `$ git clone git@github.com:fcastellanos/fernando-ror-competency-test.git`
+- `$ bundle install`
+- `$ rails db:migrate && rails db:seed`
+
+Check the `seeds.rb` file for already created users/roles
+
+**For a better styled UI check `feature/tailwind-styling/` branch which also fixes admin access role.**
+
 ## User Personas
 The project will have multiple roles that interact with each other.
 - [x] Guest (No Login)
@@ -37,7 +47,7 @@ The project will have multiple roles that interact with each other.
 - [x] Table will contain **title**, **content**, **category**, **user_id**.
 
 ## Roles
-- [x] Use one of these gems: Petergate *(Preferred)*, Pundit, Cancancan, Rolify.
+- [x] Using Petergate gem
 ###### Role Names
 - [x] user
 - [x] editor
@@ -50,7 +60,7 @@ The project will have multiple roles that interact with each other.
 - [x] Use minitest as the test suite. 
 
 ## Authentication
-- [x] Devise can be used for authentication.
+- [x] Using Devise gem.
 
 ## Templating
-- [x] slim *(Prefered)*, haml, erb
+- [x] Using slim
