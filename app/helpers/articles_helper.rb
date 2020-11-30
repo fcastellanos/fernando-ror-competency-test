@@ -4,6 +4,6 @@ module ArticlesHelper
     end
 
     def action_allowed?(user, article)
-        logged_in?(:admin) || (logged_in?(:editor) && article.user_id == user.id)
+        logged_in?(:editor) && article.user_id == user.id
     end
 end

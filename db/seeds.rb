@@ -23,6 +23,15 @@ editor = User.create(
     roles: 'editor'
 )
 
+editor2 = User.create(
+    first_name: 'John',
+    last_name: 'Doe',
+    email: 'john@editor.com',
+    password: 'letme1n',
+    password_confirmation: 'letme1n',
+    roles: 'editor'
+)
+
 user = User.create(
     first_name: 'Ulices',
     last_name: 'User',
@@ -36,54 +45,54 @@ articles = Article.create([
         category: 'ruby',
         title: 'Intro',
         content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
-        user: admin
+        user: editor
     },
     {
         category: 'ruby',
         title: 'Data Types',
         content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
-        user: admin
+        user: editor
     },
     {
         category: 'ruby',
         title: 'Flow Control',
         content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
-        user: admin
+        user: editor
     },
     {
         category: 'ruby',
         title: 'Intermediate',
         content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
-        user: admin
+        user: editor
     },
     {
         category: 'rails',
         title: 'Intro',
         content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
-        user: admin
+        user: editor
     },
     {
         category: 'rails',
         title: 'Active Record',
         content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
-        user: admin
+        user: editor2
     },
     {
         category: 'rails',
         title: 'Routing',
         content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
-        user: admin
+        user: editor2
     },
     {
         category: 'rails',
         title: 'Intermediate',
         content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
-        user: admin
+        user: editor2
     },
     {
         category: 'serverless',
         title: 'Intro',
         content: Faker::Lorem.paragraph_by_chars(number: 512, supplemental: false),
-        user: editor
+        user: editor2
     },
 ])
