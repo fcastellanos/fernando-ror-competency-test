@@ -1,8 +1,9 @@
-h1 Editing article
+section class="container mx-auto px-6 p-10"
+    h2 class="text-3xl font-bold text-center text-gray-800 mb-8" = "Editing article"
 
-== render 'form'
+    == render 'form'
 
-=> link_to 'Show', @article
-'|
-=< link_to 'Back', articles_path
+    => link_to 'Show', @article
+    '|
+    =< link_to 'Back', articles_path
 

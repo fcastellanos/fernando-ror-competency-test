@@ -1,27 +1,28 @@
-h1 Listing articles
+section class="container mx-auto px-6 p-10"
+  h2 class="text-3xl font-bold text-center text-gray-800 mb-8" = "Listing articles"
 
-table
-  thead
-    tr
-      th Title
-      th Content
-      th Category
-      th User
-      th
-      th
-      th
-
-  tbody
-    - @articles.each do |article|
+  table
+    thead
       tr
-        td = article.title
-        td = article.content.truncate(100)
-        td = article.category
-        td = format_user_name(article.user)
-        td = link_to 'Show', article if logged_in?(:user, :editor, :admin)
-        td = link_to 'Edit', edit_article_path(article) if action_allowed?(current_user, article)
-        td = link_to 'Destroy', article, data: { confirm: 'Are you sure?' }, method: :delete if action_allowed?(current_user, article)
+        th Title
+        th Content
+        th Category
+        th User
+        th
+        th
+        th
 
-br
+    tbody
+      - @articles.each do |article|
+        tr
+          td = article.title
+          td = article.content.truncate(100)
+          td = article.category
+          td = format_user_name(article.user)
+          td = link_to 'Show', article if logged_in?(:user, :editor, :admin)
+          td = link_to 'Edit', edit_article_path(article) if action_allowed?(current_user, article)
+          td = link_to 'Destroy', article, data: { confirm: 'Are you sure?' }, method: :delete if action_allowed?(current_user, article)
 
-= link_to 'New Article', new_article_path if logged_in?(:editor, :admin)
+  br
+
+  = link_to 'New Article', new_article_path, class: 'bg-white font-bold rounded-full mt-6 py-4 px-8 shadow-lg tracking-wider' if logged_in?(:editor, :admin)

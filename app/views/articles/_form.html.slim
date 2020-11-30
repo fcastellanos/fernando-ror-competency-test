@@ -7,12 +7,12 @@
           li = message
 
   .field
-    = f.label :title
-    = f.text_field :title
+    = f.label :title, class: "block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+    = f.text_field :title, class: "shadow appearance-none border rounded py-2 px-3 text-grey-darker"
   .field
-    = f.label :content
-    = f.text_area :content
+    = f.label :content, class: "block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+    = f.text_area :content, class: "shadow appearance-none border rounded py-2 px-3 text-grey-darker"
   .field
-    = f.label :category
-    = f.text_field :category
-  .actions = f.submit
+    = f.label :category, class: "block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+    = f.text_field :category, class: "shadow appearance-none border rounded py-2 px-3 text-grey-darker"
+  .actions = f.submit class: "bg-white font-bold rounded-full mt-6 py-4 px-8 shadow-lg tracking-wider"
