@@ -17,6 +17,13 @@ editor:
   email: 'eddy@editors.com'
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
+elsa: 
+  first_name: 'Elsa'
+  last_name: 'Editor'
+  roles: 'editor'
+  email: 'elsa@editors.com'
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+
 admin: 
   first_name: 'Aaron'
   last_name: 'Admin'

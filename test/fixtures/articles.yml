@@ -4,52 +4,52 @@ ruby_intro:
   category: ruby
   title: Intro
   content: MyText
-  user: admin
+  user: editor
 
 ruby_types:
   category: ruby
   title: Data Types
   content: MyText
-  user: admin
+  user: editor
 
 ruby_flow:
   category: ruby
   title: Flow Control
   content: MyText
-  user: admin
+  user: editor
 
 ruby_meta:
   category: ruby
   title: Meta Programming
   content: MyText
-  user: admin
+  user: user
 
 rails_intro:
   category: rails
   title: Intro
   content: MyText
-  user: admin
+  user: user
 
 rails_ar:
   category: rails
   title: Active Record
   content: MyText
-  user: admin
+  user: user
 
 rails_routing:
   category: rails
   title: Routing
   content: MyText
-  user: admin
+  user: elsa
 
 rails_views:
   category: rails
   title: Views
   content: MyText
-  user: admin
+  user: elsa
 
 sls_intro:
   category: serverless
   title: Intro
   content: MyText
-  user: editor
+  user: elsa
