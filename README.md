@@ -1,5 +1,15 @@
 # Simple News App - Rails Competency Test
 
+## Steps to run the project.
+
+- `$ git clone git@github.com:fcastellanos/fernando-ror-competency-test.git`
+- `$ bundle install`
+- `$ rails db:migrate && rails db:seed`
+
+Check the `seeds.rb` file for already created users/roles
+
+**For a better styled UI check `feature/tailwind-styling/` branch which also fixes admin access role.**
+
 ## User Personas
 The project will have multiple roles that interact with each other.
 - [x] Guest (No Login)
@@ -54,11 +64,3 @@ The project will have multiple roles that interact with each other.
 
 ## Templating
 - [x] Using slim
-
-## Steps to run the project.
-
-- `$ git clone git@github.com:fcastellanos/fernando-ror-competency-test.git`
-- `$ bundle install`
-- `$ rails db:migrate && rails db:seed`
-
-Check the `seeds.rb` file for already created users/roles
