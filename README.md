@@ -1,24 +1,56 @@
-# README
+# Simple News App - Rails Competency Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## User Personas
+The project will have multiple roles that interact with each other.
+- [x] Guest (No Login)
+- [x] Vanilla Users (Logged in - No special role)
+- [x] Editor Users
+- [ ] Admin Users *(Extra Credit)*
 
-Things you may want to cover:
+## User Functionality
+##### Guests (No Login)
+- [x] Can see homepage with first 3 articles from each category.
+- [x] Can see article index page.
+- [x] Are sent to login/signup page if they want to see article show page.
+  - [x] Signup form can be included on the login page or just linked to from the login page.
+- [x] Can signup
+- [x] Can Login
 
-* Ruby version
+##### Vanilla Users
+- [x] Can see everything a guest can
+- [x] Can see article show pages. 
+- [x] Can logout
 
-* System dependencies
+##### Editor Users
+- [x] Can do everything a vanilla User can.
+- [x] Can create articles
+- [x] Can delete articles that they created
+- [x] Can edit articles that they created
+- [x] Can NOT delete or edit articles created by others
 
-* Configuration
+##### Admin User *(Extra Credit)*
+- [ ] Can create users and set roles.
+- [ ] Can edit users and change roles.
+- [ ] Can't edit/destroy/create articles.
 
-* Database creation
+## Article Table
+- [x] Table will contain **title**, **content**, **category**, **user_id**.
 
-* Database initialization
+## Roles
+- [x] Use one of these gems: Petergate *(Preferred)*, Pundit, Cancancan, Rolify.
+###### Role Names
+- [x] user
+- [x] editor
+- [x] admin *(Extra Credit)*
 
-* How to run the test suite
+## Database
+- [x] Use sqlite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Testing
+- [x] Use minitest as the test suite. 
 
-* Deployment instructions
+## Authentication
+- [x] Devise can be used for authentication.
 
-* ...
+## Templating
+- [x] slim *(Prefered)*, haml, erb
